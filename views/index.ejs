@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>🍟 McDonald's Recipe Book</h1>
+    </header>
+
+    <main class="container">
+      <!-- Add Recipe Form -->
+      <section class="add-recipe">
+        <h2>Add a New Recipe</h2>
+        <form id="recipeForm" enctype="multipart/form-data">
+          <input
+            type="text"
+            id="recipeName"
+            name="name"
+            placeholder="Recipe Name"
+            required
+          />
+          <textarea
+            id="ingredients"
+            name="ingredients"
+            placeholder="Ingredients (comma separated)"
+            required
+          ></textarea>
+          <textarea
+            id="steps"
+            name="steps"
+            placeholder="Preparation Steps"
+            required
+          ></textarea>
+          <input
+            type="file"
+            id="recipeImage"
+            name="image"
+            accept="image/*"
+            required
+          />
+          <button type="submit">Add Recipe</button>
+        </form>
+      </section>
+
+      <!-- Search Box -->
+      <section class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search recipes..." />
+      </section>
+
+      <!-- Recipe List -->
+      <section class="recipe-list" id="recipeList">
+        <h2>All Recipes</h2>
+        <div class="cards" id="recipeCards">
+          <!-- Cards will be injected here by JS -->
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Recipe Book | Designed by Ravin</p>
+    </footer>
+
+    <script src="/script.js" defer></script>
+  </body>
+</html>
